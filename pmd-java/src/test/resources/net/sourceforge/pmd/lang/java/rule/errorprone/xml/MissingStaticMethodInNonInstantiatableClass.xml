@@ -379,4 +379,35 @@ public class Scratch {
 }
         ]]></code>
     </test-code>
+
+
+    <test-code>
+        <description>Test1</description>
+        <expected-problems>0</expected-problems>
+        <code><![CDATA[
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+public class Test {
+   private Test(int a, int b, int c, String abc, long d, double p,
+    String[] arr, int data, long in, float fl, String res) { } // 11 params
+}
+
+        ]]></code>
+    </test-code>
+
+    <test-code>
+        <description>Test2</description>
+        <expected-problems>1</expected-problems>
+        <code><![CDATA[
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
+public final class Test {
+   private int x;
+}
+
+
+        ]]></code>
+    </test-code>
 </test-data>
