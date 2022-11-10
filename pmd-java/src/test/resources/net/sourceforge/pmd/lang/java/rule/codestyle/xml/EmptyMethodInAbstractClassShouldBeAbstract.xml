@@ -205,4 +205,21 @@ public abstract class Foo {
 }
         ]]></code>
     </test-code>
+
+    <test-code>
+        <description>Issue4</description>
+        <expected-problems>1</expected-problems>
+        <code><![CDATA[
+import lombok.Synchronized;
+
+public abstract class mutantClass26101 {
+   @Synchronized
+   public void isVisible() {
+       ;
+   }
+}
+
+        ]]></code>
+    </test-code>
+
 </test-data>
